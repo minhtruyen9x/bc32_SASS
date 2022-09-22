@@ -1,0 +1,57 @@
+.team {
+    padding-top: 60px;
+    text-align: center;
+    background-color: #DCD1F0;
+    background-image: url("../../img/Wave_White_bottom_right_shape_01.png");
+    background-position: bottom left;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .member {
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 40px;
+        animation-delay: calc(var(--index) * 200ms);
+
+        &:hover {
+            box-shadow: 0 10px 20px 0px rgba($color: #000000, $alpha: 0.2);
+        }
+
+        .member__img {
+            overflow: hidden;
+        }
+
+        .member__img img {
+            width: 100%;
+            object-fit: contain;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .member__info {
+            padding: 28px;
+            background-color: $white-color;
+        }
+
+        .member__location {
+            color: $primary-color;
+            font-size: $fs-sm;
+            margin-bottom: 8px;
+        }
+
+        .member__name {
+            color: $title-color;
+            font-size: $fs-md;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .member__desc {
+            color: $text-color;
+            font-size: $fs-default;
+        }
+    }
+}

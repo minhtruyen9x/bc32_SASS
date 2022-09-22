@@ -1,0 +1,96 @@
+.footer {
+    padding: 120px 0;
+    background-image: url("../../img/footer_background.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    color: $white-color;
+    font-size: 0.9rem;
+
+    .animate__animated {
+        animation-delay: calc(var(--index) * 200ms);
+    }
+
+    &__wrap {
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        font-family: $font-title;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &__contact {
+        margin-bottom: 15px;
+
+        i {
+            margin-right: 8px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 12px;
+        font-size: $fs-default;
+
+        &-link {
+            transition: 0.2s;
+        }
+
+        &-link:hover {
+            color: $black-color;
+        }
+    }
+
+    &__item:has(.footer__link) {
+        position: relative;
+        padding: 8px 0;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 40%;
+            border-bottom: 1px solid $border-color;
+            width: 30%;
+        }
+    }
+
+    &__link {
+        &:hover {
+            text-decoration: none;
+            color: rgba($color: #ffffff, $alpha: 0.6);
+        }
+    }
+
+    .btn {
+        height: 48px;
+        padding: 8px 0;
+        margin-top: 16px;
+        outline: 1px solid $white-color;
+        border: none;
+    }
+
+    input {
+        width: min(240px, 100%);
+        height: 48px;
+        text-align: center;
+        border-radius: 100px;
+        outline: none;
+        color: white;
+        background-color: transparent;
+        border: 1px solid $border-color;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: $white-color;
+        }
+
+        &::placeholder {
+            color: $white-color;
+        }
+    }
+}

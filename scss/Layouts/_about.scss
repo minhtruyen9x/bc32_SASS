@@ -1,0 +1,22 @@
+.about {
+    position: relative;
+    padding: 60px 0;
+    z-index: -1;
+    background-image: url("../../img/yellow_top_wave_01.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .animate__animated {
+        animation-delay: calc(var(--index) * 500ms);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("../../img/Violet_top_left_wave.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

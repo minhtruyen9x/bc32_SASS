@@ -1,0 +1,27 @@
+.subscribe {
+    background-image: url("../../img/accent_bottom_wave_01.png");
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+
+    .animate__animated {
+        animation-delay: calc(var(--index) * 500ms);
+    }
+
+    .subscribe__img {
+        padding: 30px;
+    }
+
+    .form__header {
+        margin-bottom: 40px;
+        font-size: 1.75rem;
+    }
+
+    .form {
+        border-radius: 8px;
+        padding: 24px 16px;
+        box-shadow: 0 5px 20px rgba($color: #000000, $alpha: 0.1);
+        background-color: $white-color;
+    }
+}

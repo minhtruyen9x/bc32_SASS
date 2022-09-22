@@ -1,0 +1,65 @@
+@mixin textStyle($font-size, $font-color: false, $font-weight: false, $font-family: false) {
+    font-size: $font-size;
+
+    @if $font-color {
+        color: $font-color;
+    }
+
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+
+    @if $font-family {
+        font-weight: $font-family;
+    }
+}
+
+@mixin centerDiv($vertical: true, $horizon: true) {
+    display: flex;
+
+    @if $horizon {
+        justify-content: center;
+    }
+
+    @if $vertical {
+        align-items: center;
+    }
+}
+
+@mixin box($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin reponsiveDown($size) {
+    @if $size =="xs" {
+        @media screen and (max-width:575.98px) {
+            @content
+        }
+    }
+
+    @else if $size =="sm" {
+        @media screen and (max-width:767.98px) {
+            @content
+        }
+    }
+
+    @else if $size =="lg" {
+        @media screen and (max-width:991.98px) {
+            @content
+        }
+    }
+
+    @else if $size =="xl" {
+        @media screen and (max-width:1199.98px) {
+            @content
+        }
+    }
+
+    @else if $size {
+        @media screen and (max-width:$size) {
+            @content
+        }
+    }
+
+}

@@ -1,0 +1,76 @@
+.form-group {
+    @include textStyle($fs-sm, $text-color, false, false);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 14px;
+
+    .form-input {
+        // @include centerDiv(true, false);
+        display: flex;
+        border-radius: 20px;
+        border: 1px solid $border-color;
+        // overflow: hidden;
+        flex: 1;
+
+        &:has(.form-control:focus) {
+            border: 1px solid $border-color-hover;
+            box-shadow: 0 0 4px $shadow-color;
+        }
+
+        &:has(.form-control[required]:valid) {
+            border: 1px solid $primary-color;
+            box-shadow: none;
+        }
+
+        &:has(.form-control[required]:invalid) {
+            border: 1px solid red;
+            box-shadow: none;
+        }
+
+        &:has(.form-control:invalid)~.form-message {
+            // display: block;
+            visibility: visible;
+        }
+
+        .form-control {
+            padding: 12px;
+            font-size: $fs-sm;
+            height: 100%;
+            flex: 1;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            box-shadow: none
+        }
+
+        .form-icon i {
+            @include centerDiv;
+            width: 40px;
+            height: 40px;
+            color: $primary-color;
+            font-size: $fs-default;
+        }
+    }
+
+
+
+
+    .form-message {
+        width: 100%;
+        visibility: hidden;
+        white-space: nowrap;
+        overflow: hidden;
+        @include textStyle(14px, $primary-color, false, false);
+
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+
+    }
+
+
+
+
+}

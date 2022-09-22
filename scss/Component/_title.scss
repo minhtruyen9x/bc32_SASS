@@ -1,0 +1,20 @@
+.title {
+    margin: 4em 0;
+
+    h2 {
+        font-size: $fs-heading;
+    }
+
+    .sub-title {
+        color: $primary-color;
+        font-size: $fs-default;
+    }
+
+
+    @include reponsiveDown(xl) {
+        h2 {
+            font-size: $fs-xl;
+        }
+    }
+
+}

@@ -1,0 +1,32 @@
+:root {
+    --animate-duration: 0.6s;
+}
+
+$xs: 576px;
+$sm: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+
+$primary-color: #B61984;
+$text-color: #181818;
+$title-color: #191919;
+$black-color: black;
+$white-color: white;
+$border-color: rgba(0, 0, 0, .1);
+$border-color-hover: rgba(0, 0, 0, .3);
+$shadow-color: rgb(0 0 0 / 10%);
+
+
+$fs-sx: 0.5rem;
+$fs-sm: 0.75rem;
+$fs-btn: 0.85rem;
+$fs-default: 1rem;
+$fs-md: 1.25rem;
+$fs-lg: 2.25rem;
+$fs-xl: 3rem;
+$fs-heading: 3.6rem;
+
+
+$font-default: 'Roboto', sans-serif;
+$font-title: 'Montserrat', sans-serif;
